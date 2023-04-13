@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart task 2</title>
+</head>
+<body>
+    <div>
+        <h1>Add To Cart</h1>
+        <input type="text" id="cart">
+        <input type="button" value="Add" onclick="add()">
+        <h4>My Cart Items</h4><br>
+        <ul id="ullist" type="none"></ul>
+    </div>
+
+    <script>
+        function add()
+        {
+            var val=document.getElementById("cart").value;
+            var ul=document.getElementById("ullist");
+            var li=document.createElement("li");
+            ul.append(li);
+            li.innerText=val;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Task 9</title>
+</head>
+<body>
+
+<input type="text" id="number" value="" name="number" onkeyup="check()" placeholder="Enter a value"/>
+<select id="int"></select>
+<button onclick="che()">submit</button>
+<select id="int1"></select>
+<button onclick="suz()">submit</button>
+<form id="sp"> </form>
+
+<script>
+    function check(){
+        var a=document.getElementById("number").value;
+        var int=document.getElementById("int");
+        a=parseInt(a);
+        var opt="<option value='choose'>choose</option>";
+        for(var i=0;i<=a;i++){
+            opt+='<option value='+i+'>'+i+'</option>';}
+        int.innerHTML=opt;
+        }
+
+    function che(){
+        var int=document.getElementById("int").value;
+        var opt1="<option value='choose'>choose</option>";
+        for(var j=0;j<=int;j++){
+            opt1+='<option value='+j+'>'+j+'</option>';}
+        int1.innerHTML=opt1 ;
+    }
+
+    function suz(){
+        var int1=document.getElementById("int1").value;
+        var sp=document.getElementById("sp"); 
+        var op="";
+        for(var k=1;k<=int1;k++){
+            op+="<tr><td><input type='text' value='' placeholder='Enter user name'><input type='password' value='' placeholder='Enter Password'></td></tr><hr/>"}
+        sp.innerHTML=op;
+    }
+</script>
+</body>
+</html>

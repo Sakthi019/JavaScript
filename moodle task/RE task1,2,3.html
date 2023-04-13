@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expresion Task 1</title>
+</head>
+<body>
+    <input type="text" id="user" name="user" value="" onkeyup="user()" placeholder="Enter User Name"/>
+    <span id="sp1"></span><br/>
+    <input type="password" id="pass" name="pass" value="" onkeyup="password()" placeholder="Enter password"/>
+    <span id="sp2"></span><br/>
+    <input type="text" id="number" name="number" value="" onkeyup="number()" placeholder="Enter mobile number"/>
+    <span id="sp3"></span>
+
+    <script> 
+        function user(){
+            var ptn=new RegExp(/^[A-Z]{1}[a-z ]{1,14}$/);
+            var user=document.getElementById("user").value;
+            var sp1=document.getElementById("sp1");
+            if(user.match(ptn)){
+                sp1.innerHTML="valid user";
+            }
+            else{
+                sp1.innerHTML="invalid";
+            }
+        }
+        function password(){
+            var ptn=new RegExp(/^[A-z@.0-9]{8}$/);
+            var pass=document.getElementById("pass").value;
+            var sp2=document.getElementById("sp2");
+            if(pass.match(ptn)){
+                sp2.innerHTML="password is correct";
+            }
+            else{
+                sp2.innerHTML="password is incorrect";
+            }
+        }
+        function number(){
+            var ptn=new RegExp(/^[6-9]{1}[0-9]{9}$/);
+            var number=document.getElementById("number").value;
+            var sp3=document.getElementById("sp3");
+            if(ptn.test(number)){
+                sp3.innerHTML="valid mobile number";
+            }
+            else{
+                sp3.innerHTML="invalid mobile number";
+            }
+        }
+    </script>
+</body>   
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Task 15</title>
+</head>
+<body>
+    <input type="date" id="dob"/>
+    <input type="button" id="btn" value="Click" onclick="dob()"/>
+    <div id="divid"></div>
+    <div id="did"></div>
+    <script> 
+    function dob(){
+        var dob=document.getElementById("dob").value;
+        var dat=new Date(dob);
+        var dte=new Date(dob);
+
+        dat.setDate(dat.getDate()+5);
+        var s=dat.getDate();
+        var a=dat.getMonth()+1;
+        var k=dat.getFullYear();
+        document.getElementById("divid").innerHTML="after 5 days: "+dat+"-"+s+"/"+a+"/"+k;
+
+        dte.setDate(dte.getDate()-5);
+        var t=dte.getDate();
+        var h=dte.getMonth()+1;
+        var i=dte.getFullYear();
+        document.getElementById("did").innerHTML="before 5 days: "+dat+"-"+t+"/"+h+"/"+i;
+    }
+    </script>
+</body>
+</html>

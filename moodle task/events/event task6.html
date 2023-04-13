@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Task 6</title>
+</head>
+<body>
+
+<input type="text" id="number" value="" name="number" placeholder="Enter a value"/>
+<input type="button" value="display" onclick="check()"/><br/>
+<select id="int"></select>
+
+<script>
+    function check(){
+        var a=document.getElementById("number").value;
+        var int=document.getElementById("int");
+        a=parseInt(a);
+        var opt="<option>choose</option>";
+        for(var i=0;i<=a;i++){
+            opt+='<option>'+i+'</option>';}
+        int.innerHTML=opt;}
+</script>
+</body>
+</html>

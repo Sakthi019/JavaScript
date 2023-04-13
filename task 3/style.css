@@ -1,0 +1,55 @@
+body{
+    background-image: url("https://cdn.fansshare.com/photo/computerwallpapers/download-hd-black-apple-wallpaper-hd-wallpaper-computer-picture-wallpaper-hd-hd-wallpapers-41851378.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.con{
+    width: 25%;
+    box-shadow: 5px 5px 10px 10px white;
+    margin: 0 auto;
+    display: grid;
+    place-items:center ;
+    margin-top: 50px;
+    background-color: transparent;
+    color: white;
+    border-radius: 40px;
+}
+.size{
+    width: 80%;
+}
+input{
+    margin-top: 20px;
+    background-color: white;
+    outline: none;
+    border:2px solid white;
+    border-radius: 20px;
+    padding: 10px;
+}
+label{
+    font-size: 18px;
+}
+.but{
+    background-color:white;
+    width: 100px;
+    height: 30px;
+
+    border-radius: 20px;
+    font-size: 18px;
+    border:none;
+    margin:10px 0px 20px 50px;
+}
+.but:hover{
+    border: 2px solid black;
+}
+.user:hover{
+    border: 2px solid black;
+}
+.email:hover{
+    border: 2px solid black;
+}
+.password:hover{
+    border: 2px solid black;
+}
+.confirm_password:hover{
+    border: 2px solid black;
+}
